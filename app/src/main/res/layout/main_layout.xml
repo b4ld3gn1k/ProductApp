@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <Button
+            android:text="@string/bread"
+            android:layout_width="270dp"
+            android:layout_height="90dp"
+            android:id="@+id/breadButton"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="75dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textSize="34sp"
+            android:onClick="onClick"
+            tools:ignore="UsingOnClickInXml"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/breadCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            app:layout_constraintEnd_toStartOf="@+id/breadButton"
+            android:layout_marginEnd="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="96dp"
+            app:layout_constraintHorizontal_bias="0.0"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/breadClickCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="96dp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@+id/breadButton"/>
+
+
+
+    <Button
+            android:text="@string/milk"
+            android:layout_width="270dp"
+            android:layout_height="90dp"
+            android:id="@+id/milkButton"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/breadButton"
+            android:onClick="onClick"
+            tools:ignore="UsingOnClickInXml"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/milkCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/milkButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="76dp"
+            app:layout_constraintTop_toBottomOf="@+id/breadCount"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/milkClickCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            android:layout_marginTop="77dp"
+            app:layout_constraintTop_toBottomOf="@+id/breadClickCount"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@+id/milkButton"/>
+
+
+
+    <Button
+            android:text="@string/eggs"
+            android:layout_width="270dp"
+            android:layout_height="90dp"
+            android:id="@+id/eggsButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/milkButton"
+            android:textSize="34sp"
+            android:onClick="onClick"
+            tools:ignore="UsingOnClickInXml"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eggsCounnt"
+            android:gravity="center"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/eggsButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="76dp"
+            app:layout_constraintTop_toBottomOf="@+id/milkCount"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/eggsClickCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            android:layout_marginTop="76dp"
+            app:layout_constraintTop_toBottomOf="@+id/milkClickCount"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@+id/eggsButton"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <Button
+            android:text="@string/chees"
+            android:layout_width="270dp"
+            android:layout_height="90dp"
+            android:id="@+id/chessButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/eggsButton"
+            android:textSize="34sp"
+            android:onClick="onClick"
+            tools:ignore="UsingOnClickInXml"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheesCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/chessButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="72dp"
+            app:layout_constraintTop_toBottomOf="@+id/eggsCounnt"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/cheesClickCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@+id/chessButton"
+            android:layout_marginTop="71dp"
+            app:layout_constraintTop_toBottomOf="@+id/eggsClickCount"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+    <Button
+            android:text="@string/sausage"
+            android:layout_width="270dp"
+            android:layout_height="90dp"
+            android:id="@+id/sausageButton"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="30dp"
+            app:layout_constraintTop_toBottomOf="@+id/chessButton"
+            android:textSize="34sp"
+            android:onClick="onClick"
+            tools:ignore="UsingOnClickInXml"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sausageCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintEnd_toStartOf="@+id/sausageButton"
+            app:layout_constraintHorizontal_bias="0.0"
+            android:layout_marginTop="76dp"
+            app:layout_constraintTop_toBottomOf="@+id/cheesCount"/>
+    <TextView
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/sausageClickCount"
+            android:gravity="center"
+            android:textSize="34sp"
+            android:layout_marginStart="14dp"
+            app:layout_constraintStart_toEndOf="@+id/sausageButton"
+            android:layout_marginTop="77dp"
+            app:layout_constraintTop_toBottomOf="@+id/cheesClickCount"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
