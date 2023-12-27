@@ -56,19 +56,19 @@ public class MainActivity extends AppCompatActivity{
     public void onClick(View v) {
         if (v.getId() == breadButton.getId()){
             breadClickCount.setText(Integer.toString(++clickBread));
-            countEqualsClick(breadCount, v, breadClickCount , breadButton);
+            countEqualsClick(breadCount, breadClickCount , breadButton);
         } else if (v.getId() == milkButton.getId()) {
             milkClickCount.setText(Integer.toString(++clickMilk));
-            countEqualsClick(milkCount, v, milkClickCount , milkButton);
+            countEqualsClick(milkCount, milkClickCount , milkButton);
         }else if (v.getId() == eggsButton.getId()) {
             eggsClickCounnt.setText(Integer.toString(++clickEggs));
-            countEqualsClick(eggsCount, v, eggsClickCounnt , eggsButton);
+            countEqualsClick(eggsCount, eggsClickCounnt , eggsButton);
         }else if (v.getId() == cheesButton.getId()) {
             cheesClickCount.setText(Integer.toString(++clickChees));
-            countEqualsClick(cheesCount, v, cheesClickCount , cheesButton);
+            countEqualsClick(cheesCount, cheesClickCount , cheesButton);
         }else if (v.getId() == sausageButton.getId()) {
             sausageClickCount.setText(Integer.toString(++clickSausage));
-            countEqualsClick(sausageCount, v, sausageClickCount , sausageButton);
+            countEqualsClick(sausageCount, sausageClickCount , sausageButton);
         }
     }
 
@@ -100,7 +100,7 @@ public class MainActivity extends AppCompatActivity{
         sausageClickCount.setText("0");
     }
 
-    private void countEqualsClick(TextView count, View view, TextView click, Button button){
+    private void countEqualsClick(TextView count, TextView click, Button button){
         if (count.getText().equals(click.getText())){
             button.setVisibility(View.GONE);
             count.setVisibility(View.GONE);
