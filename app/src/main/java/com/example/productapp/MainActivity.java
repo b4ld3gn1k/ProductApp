@@ -7,6 +7,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
+
+
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity{
@@ -31,15 +33,22 @@ public class MainActivity extends AppCompatActivity{
     private TextView sausageClickCount;
     private TextView sausageCount;
 
-    static int clickBread = 0;
-    static int clickMilk = 0;
-    static int clickEggs = 0;
-    static int clickChees = 0;
-    static int clickSausage = 0;
+    private Button refreshButton;
+
+    private int clickBread = 0;
+    private int clickMilk = 0;
+    private int clickEggs = 0;
+    private int clickChees = 0;
+    private int clickSausage = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        createOrUpdate();
+    }
+
+    private void createOrUpdate(){
         setContentView(R.layout.main_layout);
 
         setValue();
@@ -50,6 +59,7 @@ public class MainActivity extends AppCompatActivity{
         cheesButton = findViewById(R.id.chessButton);
         sausageButton = findViewById(R.id.sausageButton);
 
+        refreshButton = findViewById(R.id.refreshButton);
     }
 
     @SuppressLint("SetTextI18n")
@@ -69,6 +79,9 @@ public class MainActivity extends AppCompatActivity{
         }else if (v.getId() == sausageButton.getId()) {
             sausageClickCount.setText(Integer.toString(++clickSausage));
             countEqualsClick(sausageCount, sausageClickCount , sausageButton);
+        } else if (v.getId() == refreshButton.getId()) {
+            createOrUpdate();
+            Toast.makeText(MainActivity.this, "Все обновлено", Toast.LENGTH_SHORT).show();
         }
     }
 
@@ -78,26 +91,32 @@ public class MainActivity extends AppCompatActivity{
         breadCount.setText(Integer.toString(randomCount()));
         breadClickCount = findViewById(R.id.breadClickCount);
         breadClickCount.setText("0");
+        clickBread = 0;
+
 
         milkCount = findViewById(R.id.milkCount);
         milkCount.setText(Integer.toString(randomCount()));
         milkClickCount = findViewById(R.id.milkClickCount);
         milkClickCount.setText("0");
+        clickMilk = 0;
 
         eggsCount = findViewById(R.id.eggsCounnt);
         eggsCount.setText(Integer.toString(randomCount()));
         eggsClickCounnt = findViewById(R.id.eggsClickCount);
         eggsClickCounnt.setText("0");
+        clickEggs = 0;
 
         cheesCount = findViewById(R.id.cheesCount);
         cheesCount.setText(Integer.toString(randomCount()));
         cheesClickCount = findViewById(R.id.cheesClickCount);
         cheesClickCount.setText("0");
+        clickChees = 0;
 
         sausageCount = findViewById(R.id.sausageCount);
         sausageCount.setText(Integer.toString(randomCount()));
         sausageClickCount = findViewById(R.id.sausageClickCount);
         sausageClickCount.setText("0");
+        clickSausage = 0;
     }
 
     private void countEqualsClick(TextView count, TextView click, Button button){
